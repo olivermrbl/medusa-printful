@@ -49,6 +49,10 @@ In the left sidebar, choose Settings > API and create an API for the Store creat
 5. **Set up Medusa**
 Navigate to `/backend` (Medusa project) and add the API key to your `.env`.
 ```
+mv .env.template .env 
+```
+```
+...
 PRINTFUL_API_KEY=[your-key]
 ```
 6. **Start Medusa**
