@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
-import Image from "next/image"
+import Image from "next/image";
+import React, { useContext, useEffect, useState } from "react";
 import { BiShoppingBag } from "react-icons/bi";
 import StoreContext from "../../context/store-context";
-import { formatPrice, resetOptions } from "../../utils/helper-functions";
 import styles from "../../styles/product.module.css";
 import { createClient } from "../../utils/client";
+import { resetOptions } from "../../utils/helper-functions";
 import { formatPrices } from "../../utils/prices";
 
 const Product = ({ product }) => {
@@ -56,13 +56,15 @@ const Product = ({ product }) => {
     <div className={styles.container}>
       <figure className={styles.image}>
         <div className={styles.placeholder}>
-          <Image
-            objectFit="cover"
-            layout="fill"
-            loading="eager"
-            src={product.thumbnail}
-            alt={`${product.title}`}
-          />
+          {product.thumbnail && (
+            <Image
+              objectFit="cover"
+              layout="fill"
+              loading="eager"
+              src={product.thumbnail}
+              alt={`${product.title}`}
+            />
+          )}
         </div>
       </figure>
       <div className={styles.info}>

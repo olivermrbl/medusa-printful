@@ -1,11 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import DisplayContext from "../../context/display-context";
 import StoreContext from "../../context/store-context";
-import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
 import styles from "../../styles/cart-view.module.css";
-import { quantity, sum, formatPrice } from "../../utils/helper-functions";
+import { formatPrice, quantity, sum } from "../../utils/helper-functions";
 import { formatPrices } from "../../utils/prices";
 
 const CartView = () => {
@@ -55,6 +55,7 @@ const CartView = () => {
                   >
                     <a>
                       <div className={styles.placeholder}>
+                        {i.variant.product.thumbnail && (
                       <Image
                         objectFit="cover"
                         height="100%"
@@ -62,6 +63,7 @@ const CartView = () => {
                         src={i.variant.product.thumbnail}
                         alt={`${i.title}`}
                       />
+                        )}
                       </div>
                     </a>
                   </Link>

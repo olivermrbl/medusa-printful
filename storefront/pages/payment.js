@@ -64,13 +64,15 @@ export const Payment = () => {
                     >
                       <a>
                         <div className={itemStyles.placeholder}>
-                          <Image
-                            objectFit="cover"
-                            height="100%"
-                            width="100%"
-                            src={i.variant.product.thumbnail}
-                            alt={`${i.title}`}
-                          />
+                          {i.variant.product.thumbnail && (
+                            <Image
+                              objectFit="cover"
+                              height="100%"
+                              width="100%"
+                              src={i.variant.product.thumbnail}
+                              alt={`${i.title}`}
+                            />
+                          )}
                         </div>
                       </a>
                     </Link>
