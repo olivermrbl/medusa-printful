@@ -130,7 +130,9 @@ BACKEND_URL=https://723d386a4a4e.ngrok.io # <- This should be your URL from ngro
 
 3. **Restart your Medusa server**
 
-You should now be ready to syncronize products. Go to you Printful account and create a Product template. Then add the Product to your Printful store created previously. Upon submitting the changes to your store, the product should be syncronized to Medusa. Validate this by going to your Medusa Admin running on `http://localhost:7000`. 
+You should now be ready to syncronize products. Go to you Printful account and create a Product template. Then add the Product to your Printful store created previously. Upon submitting the changes to your store, the product should be syncronized to Medusa. Validate this by going to your Medusa Admin running on `http://localhost:7000`.
+                                               
+You can now publish the product in your admin, and it should show on the storefront.
 
 ### Create an order
 
