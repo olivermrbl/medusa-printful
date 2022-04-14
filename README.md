@@ -43,9 +43,12 @@ git clone https://github.com/olivermrbl/medusa-printful
 Navigate to [Printful](https://www.printful.com/auth/login) and sign in or create an account
 3. **Create a Store**
 Choose Stores in the left side bar and create a new one of type **Manual order platform / API**
-[INSERT IMAGE]
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/59018053/163358557-8f6ffd50-636e-4089-9805-fad25f725f1d.png">
+  
 4. **Create credentials**
 In the left sidebar, choose Settings > API and create an API for the Store created in previous step. Note it down.
+<img width="500" alt="Screenshot 2022-04-14 at 11 40 43" src="https://user-images.githubusercontent.com/59018053/163358806-07573a63-336d-410d-aea5-94b750e32b62.png">
+ 
 5. **Set up Medusa**
 Navigate to `/backend` (Medusa project) and add the API key to your `.env`.
 ```
@@ -112,11 +115,13 @@ In a terminal window, start `ngrok` to tunnel traffic to `http://localhost:9000`
 ngrok http 9000
 ```
 This should give you an https URL. Note it down.
+  
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/59018053/163358917-9e431e31-615c-4065-b980-0664b3abb3be.png">
 
 2. **Set up Medusa with `ngrok`**
 Navigate to `/backend` (Medusa project) and add the URL to your `.env`.
-```
-BACKEND_URL=[your-url]
+```shell
+BACKEND_URL=https://723d386a4a4e.ngrok.io # <- This should be your URL from ngrok
 ```
 
 3. **Restart your Medusa server**
