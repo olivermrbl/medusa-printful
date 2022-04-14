@@ -59,8 +59,12 @@ mv .env.template .env
 PRINTFUL_API_KEY=[your-key]
 ```
 6. **Start Medusa**
+> At this point, we assume that you have Redis and Postgres running locally. You should have a Postgres DB named `medusa-printful`.
+
 In `/backend`, run the following commands in your terminal to get Medusa up and running:
 ```shell
+yarn
+
 # migrate and seed your database
 yarn seed
 
@@ -126,9 +130,16 @@ BACKEND_URL=https://723d386a4a4e.ngrok.io # <- This should be your URL from ngro
 
 3. **Restart your Medusa server**
 
-You should now be ready to syncronize products. Go to you Printful account and create a Product template. Then add the Product to your Printful store created previously. Upon submitting the changes to your store, the product should be syncronized to Medusa. Validate this by going to your Medusa Admin running on `http://localhost:7000`. 
+You should now be ready to syncronize products. Go to you Printful account and create a Product template. Then add the Product to your Printful store created previously. Upon submitting the changes to your store, the product should be syncronized to Medusa. Validate this by going to your Medusa Admin running on `http://localhost:7000`.
+                                               
+You can now publish the product in your admin, and it should show on the storefront.
 
 ### Create an order
+                                               
+Before creating an order, you should add shipping options to your regions. In Medusa Admin, navigate to Settings > Regions and add Printful as fulfillment provider as well as a shipping option from Printful.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/59018053/163363318-aed76b8a-a2e7-4588-9963-e4181b356036.png">
+
 
 Create an order with your Product through the storefront. In Medusa Admin, you should be able to see the order. Upon creating a fulfillment for the product in the order, the integration will create an order in Printful.
 
