@@ -59,8 +59,12 @@ mv .env.template .env
 PRINTFUL_API_KEY=[your-key]
 ```
 6. **Start Medusa**
+> At this point, we assume that you have Redis and Postgres running locally. You should have a Postgres DB named `medusa-printful`.
+
 In `/backend`, run the following commands in your terminal to get Medusa up and running:
 ```shell
+yarn
+
 # migrate and seed your database
 yarn seed
 
