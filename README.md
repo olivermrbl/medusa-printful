@@ -135,6 +135,11 @@ You should now be ready to syncronize products. Go to you Printful account and c
 You can now publish the product in your admin, and it should show on the storefront.
 
 ### Create an order
+                                               
+Before creating an order, you should add shipping options to your regions. In Medusa Admin, navigate to Settings > Regions and add Printful as fulfillment provider as well as a shipping option from Printful.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/59018053/163363318-aed76b8a-a2e7-4588-9963-e4181b356036.png">
+
 
 Create an order with your Product through the storefront. In Medusa Admin, you should be able to see the order. Upon creating a fulfillment for the product in the order, the integration will create an order in Printful.
 
