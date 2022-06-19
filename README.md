@@ -18,7 +18,7 @@
 </h4>
 
 <p align="center">
-Medusa is an open-source headless commerce engine empowering developers to do more with less. In this repo, you find Medusa combined with Printful for a powerful customizable setup for on-demand product fulfillment.
+Medusa is an open-source headless commerce engine empowering developers to do more with less. In this repo, you find Medusa combined with Printful for a powerful customizable setup for on-demand product fulfillments.
 </p>
 <p align="center">
     <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
